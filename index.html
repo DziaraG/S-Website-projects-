@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* Tło dopasowane do ciemnego motywu wiki */
+    body { background-color: #0b0c0d; margin: 0; padding: 15px; font-family: sans-serif; }
+    .container { display: flex; flex-wrap: wrap; gap: 20px; }
+    
+    /* Styl kafelka */
+    .box { 
+        background: #161719; 
+        border: 1px solid #2d2e30; 
+        border-radius: 4px; 
+        padding: 15px; 
+        width: 280px; 
+    }
+
+    h2 { 
+        color: #fff; 
+        font-size: 13px; 
+        border-bottom: 1px solid #3e4042; 
+        margin: 0 0 10px 0; 
+        padding-bottom: 8px; 
+        text-transform: uppercase; 
+    }
+
+    /* Link jako cały wiersz */
+    .item { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 10px 8px; 
+        border-bottom: 1px solid #242526; 
+        font-size: 13px; 
+        text-decoration: none; 
+        color: #b0b0b0; 
+    }
+
+    .item:hover { background: #202124; color: #fff; }
+
+    /* Trudność */
+    .diff { font-size: 9px; padding: 2px 5px; border-radius: 2px; font-weight: bold; text-transform: uppercase; border: 1px solid; }
+    .basic { color: #57bb8a; border-color: #3c6e54; }
+    .medium { color: #f1c232; border-color: #7f6000; }
+    .hard { color: #e06666; border-color: #660000; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box">
+        <h2>Mechanics</h2>
+        <a href="https://sites.google.com/view/combat-and-agility-guide/parry" target="_parent" class="item">
+            <span>Parry</span> <span class="diff basic">Basic</span>
+        </a>
+        <a href="#" target="_parent" class="item"><span>Kick</span> <span class="diff basic">Basic</span></a>
+        <a href="#" target="_parent" class="item"><span>Block</span> <span class="diff basic">Basic</span></a>
+        <a href="#" target="_parent" class="item"><span>Swing</span> <span class="diff basic">Basic</span></a>
+    </div>
+
+    <div class="box">
+        <h2>Techniques</h2>
+        <a href="#" target="_parent" class="item"><span>Dash Strike</span> <span class="diff medium">Medium</span></a>
+        <a href="#" target="_parent" class="item"><span>Dash Snipe</span> <span class="diff hard">Hard</span></a>
+    </div>
+</div>
+
+</body>
+</html>
