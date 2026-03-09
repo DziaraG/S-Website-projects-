@@ -1,68 +1,200 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-<style>
-    /* Tło dopasowane do ciemnego motywu wiki */
-    body { background-color: #0b0c0d; margin: 0; padding: 15px; font-family: sans-serif; }
-    .container { display: flex; flex-wrap: wrap; gap: 20px; }
-    
-    /* Styl kafelka */
-    .box { 
-        background: #161719; 
-        border: 1px solid #2d2e30; 
-        border-radius: 4px; 
-        padding: 15px; 
-        width: 280px; 
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combat & Agility Guide | Sniper_Dziara</title>
+    <style>
+        :root {
+            --bg: #050505;
+            --card-bg: #0f0f0f;
+            --border: #222;
+            --text-main: #ccc;
+            --accent: #57bb8a;
+            --header-fs: 13px;
+        }
 
-    h2 { 
-        color: #fff; 
-        font-size: 13px; 
-        border-bottom: 1px solid #3e4042; 
-        margin: 0 0 10px 0; 
-        padding-bottom: 8px; 
-        text-transform: uppercase; 
-    }
+        body { 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
+            margin: 0; 
+            padding: 40px 20px; 
+            line-height: 1.6;
+        }
 
-    /* Link jako cały wiersz */
-    .item { 
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center; 
-        padding: 10px 8px; 
-        border-bottom: 1px solid #242526; 
-        font-size: 13px; 
-        text-decoration: none; 
-        color: #b0b0b0; 
-    }
+        .main-header { 
+            text-align: left; 
+            max-width: 1000px; 
+            margin: 0 auto 40px auto; 
+            border-left: 4px solid var(--accent);
+            padding-left: 20px;
+        }
 
-    .item:hover { background: #202124; color: #fff; }
+        h1 { 
+            color: #fff; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            margin: 0; 
+            font-size: 28px;
+        }
 
-    /* Trudność */
-    .diff { font-size: 9px; padding: 2px 5px; border-radius: 2px; font-weight: bold; text-transform: uppercase; border: 1px solid; }
-    .basic { color: #57bb8a; border-color: #3c6e54; }
-    .medium { color: #f1c232; border-color: #7f6000; }
-    .hard { color: #e06666; border-color: #660000; }
-</style>
+        .author { 
+            font-size: 12px; 
+            color: #666; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        /* Układ 3 kolumn */
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 25px; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+        }
+
+        .box { 
+            background: var(--card-bg); 
+            border: 1px solid var(--border); 
+            border-radius: 4px; 
+            padding: 20px; 
+            height: fit-content;
+        }
+
+        h2 { 
+            color: #fff; 
+            font-size: var(--header-fs); 
+            border-bottom: 1px solid #333; 
+            margin: 0 0 15px 0; 
+            padding-bottom: 10px; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .item { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 8px 6px; 
+            border-bottom: 1px solid #1a1a1a; 
+            text-decoration: none; 
+            color: #999; 
+            font-size: 13px;
+            transition: 0.2s ease;
+        }
+
+        .item:hover { 
+            background: #161616; 
+            color: #fff; 
+            padding-left: 12px;
+            border-bottom-color: var(--accent);
+        }
+
+        /* Oznaczenia trudności (opcjonalne tagi) */
+        .tag { font-size: 9px; padding: 2px 5px; border-radius: 2px; font-weight: bold; opacity: 0.7; border: 1px solid; }
+        .b { color: #4caf50; border-color: #4caf50; } /* Basic */
+        .m { color: #ff9800; border-color: #ff9800; } /* Medium */
+        .h { color: #f44336; border-color: #f44336; } /* Hard */
+
+        @media (max-width: 600px) {
+            .grid-container { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
+<header class="main-header">
+    <h1>Combat & Agility Guide</h1>
+    <div class="author">by Sniper_Dziara</div>
+</header>
+
+<div class="grid-container">
+    
     <div class="box">
         <h2>Mechanics</h2>
-        <a href="https://sites.google.com/view/combat-and-agility-guide/parry" target="_parent" class="item">
-            <span>Parry</span> <span class="diff basic">Basic</span>
-        </a>
-        <a href="#" target="_parent" class="item"><span>Kick</span> <span class="diff basic">Basic</span></a>
-        <a href="#" target="_parent" class="item"><span>Block</span> <span class="diff basic">Basic</span></a>
-        <a href="#" target="_parent" class="item"><span>Swing</span> <span class="diff basic">Basic</span></a>
+        <a href="parry.html" class="item"><span>Parry</span><span class="tag b">B</span></a>
+        <a href="kick.html" class="item"><span>Kick</span><span class="tag b">B</span></a>
+        <a href="block.html" class="item"><span>Block</span><span class="tag b">B</span></a>
+        <a href="swing.html" class="item"><span>Swing</span><span class="tag b">B</span></a>
+        <a href="dash.html" class="item"><span>Dash</span><span class="tag b">B</span></a>
+        <a href="skid.html" class="item"><span>Skid</span><span class="tag b">B</span></a>
+        <a href="flip.html" class="item"><span>Flip</span><span class="tag b">B</span></a>
+
+        <h2 style="margin-top:25px">Agility</h2>
+        <a href="high-flip.html" class="item"><span>High Flip</span><span class="tag m">M</span></a>
+        <a href="low-flip.html" class="item"><span>Low Flip</span><span class="tag m">M</span></a>
+        <a href="double-jump.html" class="item"><span>Double Jump</span><span class="tag h">H</span></a>
+        <a href="ghost-jump.html" class="item"><span>Ghost Jump</span><span class="tag h">H</span></a>
+        <a href="flip-chaining.html" class="item"><span>Flip Chaining</span><span class="tag h">H</span></a>
+
+        <h2 style="margin-top:25px">Combos</h2>
+        <a href="double-skid-strike.html" class="item"><span>Double Skid Strike</span></a>
+        <a href="low-flip-skid-strike.html" class="item"><span>Low Flip Skid Strike</span></a>
+        <a href="skid-strike-dash-ramp.html" class="item"><span>Skid Strike Dash Ramp</span></a>
     </div>
 
     <div class="box">
         <h2>Techniques</h2>
-        <a href="#" target="_parent" class="item"><span>Dash Strike</span> <span class="diff medium">Medium</span></a>
-        <a href="#" target="_parent" class="item"><span>Dash Snipe</span> <span class="diff hard">Hard</span></a>
+        <a href="#" class="item"><span>Dash Strike</span></a>
+        <a href="#" class="item"><span>Skid Strike</span></a>
+        <a href="#" class="item"><span>Dash Snipe</span></a>
+        <a href="#" class="item"><span>Dash Ramp</span></a>
+        <a href="#" class="item"><span>Low Flip Strike</span></a>
+        <a href="#" class="item"><span>Flip Strike</span></a>
+        <a href="#" class="item"><span>Dive Hit</span></a>
+        <a href="#" class="item"><span>Skid Parry</span></a>
+        <a href="#" class="item"><span>Dash Parry</span></a>
+        <a href="#" class="item"><span>Low Flip Parry</span></a>
+        <a href="#" class="item"><span>High Flip Parry</span></a>
+        <a href="#" class="item"><span>Dive Hit Parry</span></a>
+        <a href="#" class="item"><span>Super Multis</span></a>
+        <a href="#" class="item"><span>Slingshot</span></a>
+        <a href="#" class="item"><span>Dash Stun Evasion</span></a>
+        <a href="#" class="item"><span>Skid Stun Evasion</span></a>
+        <a href="#" class="item"><span>Flip Stun Evasion</span></a>
     </div>
+
+    <div class="box">
+        <h2>Combat Terms</h2>
+        <a href="#" class="item"><span>Punishing</span></a>
+        <a href="#" class="item"><span>Move stacking</span></a>
+        <a href="#" class="item"><span>Trading</span></a>
+        <a href="#" class="item"><span>Pressuring</span></a>
+        <a href="#" class="item"><span>Combat Pace/Flow</span></a>
+        <a href="#" class="item"><span>Positioning</span></a>
+        <a href="#" class="item"><span>Blendering</span></a>
+        <a href="#" class="item"><span>Baiting</span></a>
+        <a href="#" class="item"><span>Parry Coverage</span></a>
+        <a href="#" class="item"><span>Block Beating</span></a>
+
+        <h2 style="margin-top:25px">Miscellaneous</h2>
+        <a href="#" class="item"><span>Outnumbered Fighting</span></a>
+        <a href="#" class="item"><span>Number Advantage</span></a>
+        <a href="#" class="item"><span>Survival</span></a>
+
+        <h2 style="margin-top:25px">Playstyles</h2>
+        <a href="#" class="item"><span>Survivor</span></a>
+        <a href="#" class="item"><span>Aggressor</span></a>
+
+        <h2 style="margin-top:25px">Strategies & Training</h2>
+        <a href="#" class="item"><span>Health Rotation</span></a>
+        <a href="#" class="item"><span>Exercises / Training</span></a>
+    </div>
+
 </div>
 
 </body>
