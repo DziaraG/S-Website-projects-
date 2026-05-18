@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,16 +24,19 @@
         .vid-right { width: 350px; position: sticky; top: 40px; }
         .vid-box { 
             background: #000; border: 1px solid var(--border); 
-            width: 100%; aspect-ratio: 16/9; 
+            width: 100%; 
+            height: 622px; 
             display: flex; align-items: center; justify-content: center;
+            overflow: hidden;
+            border-radius: 4px;
         }
-        .vid-box video { width: 100%; height: 100%; object-fit: cover; }
+        .vid-box iframe { width: 100%; height: 100%; border: none; }
 
         h2 { color: #fff; font-size: 18px; margin-top: 35px; border-bottom: 1px solid var(--border); padding-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
         .info-txt { color: #aaa; line-height: 1.6; font-size: 14px; margin-top: 10px; }
         
-        .rank-box { display: inline-block; background: #111; border: 1px solid var(--border); padding: 4px 10px; border-radius: 4px; margin-top: 10px; }
-        .rank-value { font-weight: bold; color: #ff9800; } 
+        .diff-box { display: inline-block; background: #111; border: 1px solid var(--border); padding: 4px 10px; border-radius: 4px; margin-top: 10px; font-size: 13px; }
+        .diff-value { font-weight: bold; color: #ff9800; text-transform: uppercase; } 
 
         .key { background: #333; padding: 3px 8px; border-radius: 4px; color: #fff; font-family: monospace; border-bottom: 2px solid #000; margin: 0 2px; font-size: 13px; }
         
@@ -44,7 +47,7 @@
 <body>
 
 <div class="container">
-    <a href="index.html" class="back-link">← Główna</a>
+    <a href="index.html" class="back-link">← Main Menu</a>
     <h1>Dash Ramp</h1>
     <div class="top-line"></div>
 
@@ -53,42 +56,6 @@
         <div class="content-left">
             
             <h2>Info</h2>
-            <div class="rank-box">Usefulness: <span class="rank-value">M</span></div>
+            <div class="diff-box">Difficulty: <span class="diff-value">Medium</span></div>
             <p class="info-txt">
-                Dash Ramp is a good technique for quickly closing the distance and damaging your opponent in more unique way. You can perform this with either block cancel or without it. I highly recommend using the block cancel to lower the chances of you getting traded. Additionally they are good for chaining combos, keeping the momentum and most importantly chasing.
-            </p>
-
-            <h2>Input</h2>
-            <p class="info-txt">
-                <b>Standard:</b> <span class="key">W</span> + <span class="key">E</span> + <span class="key">SPACE</span> + <span class="key">M1</span><br><br>
-                <b>With block canceling:</b> <span class="key">W</span> + <span class="key">E</span> + <span class="key">SPACE</span> + <span class="key">M1</span> + <span class="key">M2</span>
-            </p>
-
-            <h2>Use cases</h2>
-            <p class="info-txt">
-                • Chaining combos and maintaining momentum during aggressive plays.<br>
-                • Effective chasing tool to hunt down retreating opponents.<br>
-                • After stunning someone, doing 1 Dash Strike and later connecting it with Dash Ramp creates a very high-value combo.
-            </p>
-
-            <h2>Tips</h2>
-            <p class="info-txt">
-                • You should watch out for parries when doing dash ramps because getting parried mid air might not always allow you to stun evade.<br><br>
-                • <b>Off-region server mechanic:</b> When fighting on high latency, if you do a dash ramp and get stunned mid air, you will be able to stun evade immediately after landing.
-            </p>
-        </div>
-
-        <div class="vid-right">
-            <div class="vid-box">
-                <video autoplay loop muted playsinline>
-                    <source src="dash_ramp_preview.mp4" type="video/mp4">
-                    [Wideo w przygotowaniu]
-                </video>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-</body>
-</html>
+                Dash Ramp is a good technique
