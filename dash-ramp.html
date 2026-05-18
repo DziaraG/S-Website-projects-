@@ -13,34 +13,50 @@
             --text: #ccc;
         }
         body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 40px 20px; }
-        .container { max-width: 1000px; margin: 0 auto; }
+        .container { max-width: 1100px; margin: 0 auto; }
         
-        h1 { color: #fff; margin: 0; padding-bottom: 10px; font-size: 32px; text-transform: uppercase; }
+        h1 { color: #fff; margin: 0; padding-bottom: 10px; font-size: 34px; text-transform: uppercase; }
         .top-line { border-bottom: 3px solid #fff; margin-bottom: 30px; width: 100%; }
 
         .main-wrapper { display: flex; gap: 40px; align-items: flex-start; }
         .content-left { flex: 1; }
         
-        .vid-right { width: 350px; position: sticky; top: 40px; }
+        /* Prawa kolumna zoptymalizowana pod poziome wideo 16:9 */
+        .vid-right { width: 420px; position: sticky; top: 40px; display: flex; flex-direction: column; gap: 25px; }
+        
+        .vid-title {
+            background: #222;
+            color: #fff;
+            padding: 4px 12px;
+            font-size: 13px;
+            font-weight: bold;
+            display: inline-block;
+            border-radius: 4px 4px 0 0;
+            margin-bottom: -1px;
+            width: fit-content;
+        }
+
         .vid-box { 
             background: #000; border: 1px solid var(--border); 
             width: 100%; 
-            height: 622px; 
+            aspect-ratio: 16/9; 
             display: flex; align-items: center; justify-content: center;
             overflow: hidden;
-            border-radius: 4px;
+            border-radius: 0 4px 4px 4px;
         }
         .vid-box iframe { width: 100%; height: 100%; border: none; }
 
-        h2 { color: #fff; font-size: 18px; margin-top: 35px; border-bottom: 1px solid var(--border); padding-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
-        .info-txt { color: #aaa; line-height: 1.6; font-size: 14px; margin-top: 10px; }
+        h2 { color: #fff; font-size: 20px; margin-top: 35px; border-bottom: 1px solid var(--border); padding-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Delikatnie powiększona czcionka tekstu dla lepszej czytelności */
+        .info-txt { color: #aaa; line-height: 1.6; font-size: 15px; margin-top: 10px; }
         
         .diff-box { display: inline-block; background: #111; border: 1px solid var(--border); padding: 4px 10px; border-radius: 4px; margin-top: 10px; font-size: 13px; }
         .diff-value { font-weight: bold; color: #ff9800; text-transform: uppercase; } 
 
-        .key { background: #333; padding: 3px 8px; border-radius: 4px; color: #fff; font-family: monospace; border-bottom: 2px solid #000; margin: 0 2px; font-size: 13px; }
+        .key { background: #333; padding: 3px 8px; border-radius: 4px; color: #fff; font-family: monospace; border-bottom: 2px solid #000; margin: 0 2px; font-size: 14px; }
         
-        .back-link { color: var(--accent); text-decoration: none; font-size: 12px; display: block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .back-link { color: var(--accent); text-decoration: none; font-size: 13px; display: block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
         .back-link:hover { color: #fff; }
     </style>
 </head>
@@ -75,9 +91,21 @@
         </div>
 
         <div class="vid-right">
-            <div class="vid-box">
-                <iframe src="https://medal.tv/clip/mJJBZm9iIkETfgPlI?autoplay=1&loop=1&muted=1&controls=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            
+            <div>
+                <div class="vid-title">Dash Ramp</div>
+                <div class="vid-box">
+                    <iframe src="https://medal.tv/clip/mJJBZm9iIkETfgPlI?autoplay=1&loop=1&muted=1&controls=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
             </div>
+
+            <div>
+                <div class="vid-title">Dash Ramp BC</div>
+                <div class="vid-box">
+                    <iframe src="https://medal.tv/clip/mJJSBaRpdVp-9xfiE?autoplay=1&loop=1&muted=1&controls=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+            </div>
+
         </div>
 
     </div>
