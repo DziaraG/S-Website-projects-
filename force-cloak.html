@@ -22,27 +22,36 @@
         .content-left { flex: 1; }
         
         .vid-right { width: 420px; position: sticky; top: 40px; display: flex; flex-direction: column; gap: 25px; }
+        
         .vid-title {
-            background: #222; color: #fff; padding: 4px 12px; font-size: 13px;
-            font-weight: bold; display: inline-block; border-radius: 4px 4px 0 0;
-            margin-bottom: -1px; width: fit-content;
+            background: #222;
+            color: #fff;
+            padding: 4px 12px;
+            font-size: 13px;
+            font-weight: bold;
+            display: inline-block;
+            border-radius: 4px 4px 0 0;
+            margin-bottom: -1px;
+            width: fit-content;
         }
+
         .vid-box { 
-            background: #000; border: 1px solid var(--border); width: 100%; 
-            aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;
-            overflow: hidden; border-radius: 0 4px 4px 4px;
+            background: #000; border: 1px solid var(--border); 
+            width: 100%; 
+            aspect-ratio: 16/9; 
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden;
+            border-radius: 0 4px 4px 4px;
         }
         .vid-box iframe { width: 100%; height: 100%; border: none; }
 
         h2 { color: #fff; font-size: 20px; margin-top: 35px; border-bottom: 1px solid var(--border); padding-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
         .info-txt { color: #aaa; line-height: 1.6; font-size: 15px; margin-top: 10px; }
         
-        
         .rank-list { margin: 15px 0; padding-left: 20px; color: #aaa; font-size: 15px; }
         .rank-list li { margin-bottom: 8px; }
         .highlight { color: #fff; font-weight: bold; }
 
-      
         table { width: 100%; border-collapse: collapse; margin-top: 15px; background: #0b0b0b; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
         th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--border); font-size: 14px; }
         th { background: #111; color: #fff; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; }
@@ -50,7 +59,6 @@
         
         .grade-badge { background: #222; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: bold; font-family: monospace; display: inline-block; }
         
-     
         .tooltip { position: relative; display: inline-block; cursor: pointer; color: var(--accent); font-weight: bold; margin-left: 4px; }
         .tooltip .tooltiptext {
             visibility: hidden; width: 240px; background-color: #1c1c1c; color: #fff;
@@ -73,7 +81,7 @@
 
     <div class="main-wrapper">
         
-        
+        <!-- LEFT COLUMN: CONTENT -->
         <div class="content-left">
             
             <h2>Info</h2>
@@ -81,7 +89,7 @@
                 Force Cloak allows its user to be almost fully invisible at a small force cost. This ability should be mainly used for hiding, ambushing, and assassinating, which makes it a great tool for Jedi Shadows. 
             </p>
             <p class="info-txt">
-                The biggest downside of it is the visibility with movement techniques and not being able to cloak while combat tagged (which has a cooldown of 30 seconds after being hit). It takes around 0.3 seconds to be almost fully cloaked after the input. Once cloaked or after changing your visibility level, it will take around 2.5 seconds to be fully invisible again. Also, you should know that igniting your weapon will disable the cloak.
+                The biggest downside of it is the visibility with movement techniques and not being able to cloak while combat tagged (which has a cooldown of 30 seconds after being hit). It takes around 0.3 seconds to be almost fully cloaked after the input. Once cloaked or after changing your visibility level, it will take around 2.5 seconds to be fully invisible again (check the Fade Time clip for better context). Also, you should know that igniting your weapon will disable the cloak.
             </p>
 
             <h2>Cloak Duration</h2>
@@ -155,16 +163,25 @@
             </p>
         </div>
 
-        
+        <!-- RIGHT COLUMN: TWO VIDEO CLIPS -->
         <div class="vid-right">
+            
+            <!-- Video 1: Showcase -->
             <div>
                 <div class="vid-title">Force Cloak Showcase</div>
                 <div class="vid-box">
-                    
-                    <iframe src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    <div style="color: #555; position: absolute; z-index: -1;">[ Paste Medal Link Here ]</div>
+                    <iframe src="https://medal.tv/clip/mPRXqW3McVG66i8P5?autoplay=1&loop=1&muted=1&controls=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div>
             </div>
+
+            <!-- Video 2: Fade Time (2.5s Delay) -->
+            <div>
+                <div class="vid-title">Fade Time Showcase</div>
+                <div class="vid-box">
+                    <iframe src="https://medal.tv/clip/mPS5KpC7DQLNxlaCM?autoplay=1&loop=1&muted=1&controls=0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div>
+            </div>
+
         </div>
 
     </div>
